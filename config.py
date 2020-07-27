@@ -24,8 +24,8 @@ WEBHOOK_PORT = env.int('WEBHOOK_PORT')
 
 # DATABASE
 DB_HOST = env.str('DB_HOST', default='localhost')
-DB_PORT = env.int('DB_PORT', default=3306)
-DB_USER = env.str('DB_USER', default='root')
+DB_PORT = env.int('DB_PORT', default=5432)
+DB_USER = env.str('DB_USER', default='postgres')
 DB_PASSWORD = env.str('DB_PASSWORD', default=None)
 DB_DATABASE = env.str('DB_DATABASE')
 
