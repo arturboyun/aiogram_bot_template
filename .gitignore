@@ -1,0 +1,5 @@
+.env
+.venv/
+.idea/
+.vscode/
+alembic/versions/*
