@@ -3,3 +3,4 @@
 .idea/
 .vscode/
 alembic/versions/*
+logs/*
