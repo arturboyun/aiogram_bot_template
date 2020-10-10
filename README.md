@@ -1,19 +1,19 @@
 # Aiogram bot template
 Template for telegram bot
 
-# First setup
+## First setup
 ```
 pipenv install
 pipenv shell
 python main.py
 ```
 
-# For run
+## For run
 ```
 pipenv shell
 python main.py
 ```
 
-# TODO
+## TODO
 - [x] Upload template
 - [ ] Change SQLAlchemy to TortoiseORM
