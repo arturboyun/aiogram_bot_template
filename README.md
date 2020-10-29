@@ -3,17 +3,17 @@ Template for telegram bot
 
 ## First setup
 ```
-pipenv install
-pipenv shell
-python main.py
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ## For run
 ```
-pipenv shell
 python main.py
 ```
 
 ## TODO
-- [x] Upload template
-- [ ] Change SQLAlchemy to TortoiseORM
+- [X] Upload template
+- [X] Change SQLAlchemy to TortoiseORM
+- [X] Add example for work with TortoiseORM
