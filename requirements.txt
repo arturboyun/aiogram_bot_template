@@ -10,13 +10,17 @@ Babel==2.8.0
 certifi==2020.6.20
 chardet==3.0.4
 click==7.1.2
+colorama==0.4.4
+envparse==0.2.0
 hiredis==1.1.0
 idna==2.10
 iso8601==0.1.13
+loguru==0.5.3
 multidict==5.0.0
 pydantic==1.7.1
 PyPika==0.43.0
 pytz==2020.1
 tortoise-orm==0.16.17
 typing-extensions==3.7.4.3
+win32-setctime==1.0.3
 yarl==1.6.2

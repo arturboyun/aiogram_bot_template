@@ -1,0 +1,5 @@
+{
+  "upgrade": [
+    "CREATE TABLE IF NOT EXISTS \"users\" (\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"user_id\" INT NOT NULL UNIQUE,\n    \"username\" VARCHAR(255) NOT NULL,\n    \"full_name\" VARCHAR(255) NOT NULL\n);\nCREATE TABLE IF NOT EXISTS \"aerich\" (\n    \"id\" SERIAL NOT NULL PRIMARY KEY,\n    \"version\" VARCHAR(255) NOT NULL,\n    \"app\" VARCHAR(20) NOT NULL,\n    \"content\" TEXT NOT NULL\n);"
+  ]
+}

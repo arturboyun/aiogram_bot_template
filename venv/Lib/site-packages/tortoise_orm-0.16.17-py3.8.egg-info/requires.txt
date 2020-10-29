@@ -1,0 +1,14 @@
+pypika>=0.39.0
+iso8601>=0.1.12
+aiosqlite>=0.11.0
+typing-extensions>=3.7
+aerich>=0.3.2
+
+[accel]
+
+[accel:implementation_name == "cpython"]
+python-rapidjson
+
+[accel:sys_platform != "win32" and implementation_name == "cpython"]
+ciso8601>=2.1.2
+uvloop>=0.12.0

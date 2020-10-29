@@ -4,3 +4,4 @@
 .vscode/
 alembic/versions/*
 logs/*
+**__pycache__/

@@ -1,0 +1,3 @@
+[console_scripts]
+aerich=aerich.cli:main
+

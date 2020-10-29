@@ -1,0 +1,106 @@
+# ChangeLog
+
+## 0.3
+
+### 0.3.2
+
+- Fix migrate to new database error. (#62)
+
+### 0.3.1
+
+- Fix first version error.
+- Fix init error. (#61)
+
+### 0.3.0
+
+- Refactoring migrate logic, and this version is not compatible with previous version.
+- Now there don't need `old_models.py` and it store in database.
+- Upgrade steps:
+  1. Upgrade aerich version.
+  2. Drop aerich table in database.
+  3. Delete `migrations/{app}` folder and rerun `aerich init-db`.
+  4. Update model and `aerich migrate` normally.
+
+## 0.2
+
+### 0.2.5
+
+- Fix windows support. (#46)
+- Support `db_constraint` in fk, m2m should manual define table with fk. (#52)
+
+### 0.2.4
+
+- Raise error with SQLite unsupported features.
+- Fix Postgres alter table. (#48)
+- Add `Rename` support.
+
+### 0.2.3
+
+- Fix tortoise ssl config.
+- PostgreSQL add/drop index/unique.
+
+### 0.2.2
+
+- Fix postgres drop fk.
+- Fix version sort.
+
+### 0.2.1
+
+- Fix bug in windows.
+- Enhance PostgreSQL support.
+
+### 0.2.0
+
+- Update model file find method.
+- Set `--safe` bool.
+
+## 0.1
+
+### 0.1.9
+
+- Fix default_connection when upgrade
+- Find default app instead of default.
+- Diff MySQL ddl.
+- Check tortoise config.
+
+### 0.1.8
+
+- Fix upgrade error when migrate.
+- Fix init db sql error.
+- Support change column.
+
+### 0.1.7
+
+- Exclude models.Aerich.
+- Add init record when init-db.
+- Fix version num str.
+
+### 0.1.6
+
+- update dependency_links
+
+### 0.1.5
+
+- Add sqlite and postgres support.
+- Fix dependency import.
+- Store versions in db.
+
+### 0.1.4
+
+- Fix transaction and fields import.
+- Make unique index worked.
+- Add cli --version.
+
+### 0.1.3
+
+- Support indexes and unique_together.
+
+### 0.1.2
+
+- Now aerich support m2m.
+- Add cli cmd init-db.
+- Change cli options.
+
+### 0.1.1
+
+- Now aerich is basic worked.
