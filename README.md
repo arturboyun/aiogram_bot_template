@@ -17,3 +17,5 @@ python main.py
 - [X] Upload template
 - [X] Change SQLAlchemy to TortoiseORM
 - [X] Add example for work with TortoiseORM
+- [ ] Add Docker
+- [ ] CI/CD
