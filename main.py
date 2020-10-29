@@ -1,8 +1,7 @@
 from aiohttp import web
 from loguru import logger
 
-from bot import logging, misc, handlers
-from bot.models import *
+from bot import logging, misc, handlers, database
 from bot.misc import dp, executor
 import config
 
@@ -10,6 +9,7 @@ import config
 async def on_startup(web_app: web.Application):
     await logging.setup()
     await misc.setup()
+    await database.setup()
 
     logger.info("Configure webhook...")
     await dp.bot.delete_webhook()
