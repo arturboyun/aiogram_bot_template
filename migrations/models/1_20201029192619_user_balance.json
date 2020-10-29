@@ -1,0 +1,8 @@
+{
+  "upgrade": [
+    "ALTER TABLE \"users\" ADD \"balance\" DECIMAL(32,2) NOT NULL  DEFAULT 0"
+  ],
+  "downgrade": [
+    "ALTER TABLE \"users\" DROP COLUMN \"balance\""
+  ]
+}
