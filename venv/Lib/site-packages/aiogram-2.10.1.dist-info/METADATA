@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: aiogram
+Version: 2.10.1
+Summary: Is a pretty simple and fully asynchronous framework for Telegram Bot API
+Home-page: https://github.com/aiogram/aiogram
+Author: Alex Root Junior
+Author-email: jroot.junior@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Dist: aiohttp (<4.0.0,>=3.5.4)
+Requires-Dist: Babel (>=2.6.0)
+Requires-Dist: certifi (>=2019.3.9)
+Provides-Extra: fast
+Requires-Dist: uvloop (<0.15.0,>=0.14.0) ; extra == 'fast'
+Requires-Dist: ujson (>=1.35) ; extra == 'fast'
+Provides-Extra: proxy
+Requires-Dist: aiohttp-socks (<0.6.0,>=0.5.3) ; extra == 'proxy'
+
+AIOGramBot
+==========
+
+.. image:: https://img.shields.io/badge/telegram-aiogram-blue.svg?style=flat-square
+   :target: https://t.me/aiogram_live
+   :alt: [Telegram] aiogram live
+
+.. image:: https://img.shields.io/pypi/v/aiogram.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/aiogram
+   :alt: PyPi Package Version
+
+.. image:: https://img.shields.io/pypi/status/aiogram.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/aiogram
+   :alt: PyPi status
+
+.. image:: https://img.shields.io/pypi/dm/aiogram.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/aiogram
+   :alt: PyPi downloads
+
+.. image:: https://img.shields.io/pypi/pyversions/aiogram.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/aiogram
+   :alt: Supported python versions
+
+.. image:: https://img.shields.io/badge/Telegram%20Bot%20API-4.9-blue.svg?style=flat-square&logo=telegram
+   :target: https://core.telegram.org/bots/api
+   :alt: Telegram Bot API
+
+.. image:: https://img.shields.io/readthedocs/aiogram?style=flat-square
+   :target: http://docs.aiogram.dev/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. image:: https://img.shields.io/github/issues/aiogram/aiogram.svg?style=flat-square
+   :target: https://github.com/aiogram/aiogram/issues
+   :alt: Github issues
+
+.. image:: https://img.shields.io/pypi/l/aiogram.svg?style=flat-square
+   :target: https://opensource.org/licenses/MIT
+   :alt: MIT License
+
+
+**aiogram** is a pretty simple and fully asynchronous framework for `Telegram Bot API <https://core.telegram.org/bots/api>`_ written in Python 3.7 with `asyncio <https://docs.python.org/3/library/asyncio.html>`_ and `aiohttp <https://github.com/aio-libs/aiohttp>`_. It helps you to make your bots faster and simpler.
+
+You can `read the docs here <http://docs.aiogram.dev/en/latest/>`_.
+
+Official aiogram resources
+--------------------------
+
+- News: `@aiogram_live <https://t.me/aiogram_live>`_
+- Community: `@aiogram <https://t.me/aiogram>`_
+- Russian community: `@aiogram_ru <https://t.me/aiogram_ru>`_
+- Pip: `aiogram <https://pypi.python.org/pypi/aiogram>`_
+- Docs: `ReadTheDocs <http://docs.aiogram.dev>`_
+- Source: `Github repo <https://github.com/aiogram/aiogram>`_
+- Issues/Bug tracker: `Github issues tracker <https://github.com/aiogram/aiogram/issues>`_
+- Test bot: `@aiogram_bot <https://t.me/aiogram_bot>`_
+
+
