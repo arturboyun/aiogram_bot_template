@@ -16,6 +16,7 @@ python main.py
 ## TODO
 - [X] Upload template
 - [X] Change SQLAlchemy to TortoiseORM
+- [X] Migrations for TortoiseORM
 - [X] Add example for work with TortoiseORM
 - [ ] Add FastAPI for webhook and other stuff
 - [ ] Remake project structure
