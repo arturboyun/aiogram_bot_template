@@ -18,5 +18,6 @@ python main.py
 - [X] Change SQLAlchemy to TortoiseORM
 - [X] Add example for work with TortoiseORM
 - [ ] Add FastAPI for webhook and other stuff
+- [ ] Remake project structure
 - [ ] Add Docker
 - [ ] CI/CD
