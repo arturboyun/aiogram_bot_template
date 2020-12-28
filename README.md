@@ -17,5 +17,6 @@ python main.py
 - [X] Upload template
 - [X] Change SQLAlchemy to TortoiseORM
 - [X] Add example for work with TortoiseORM
+- [ ] Add FastAPI for webhook and other stuff
 - [ ] Add Docker
 - [ ] CI/CD
