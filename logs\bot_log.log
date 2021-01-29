@@ -1,0 +1,1736 @@
+2021-01-29 21:33:42.790 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:33:42.791 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:33:42.791 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'POSTGRES_://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:33:42.864 | WARNING  | __main__:<module>:45 - Goodbye!
+2021-01-29 21:33:47.568 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:33:47.568 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:33:47.568 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'POSTGRES_://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:33:47.634 | WARNING  | __main__:<module>:45 - Goodbye!
+2021-01-29 21:33:50.379 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:33:50.380 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:33:50.380 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'POSTGRES_://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:33:50.449 | WARNING  | __main__:<module>:45 - Goodbye!
+2021-01-29 21:33:53.383 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:33:53.383 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:33:53.384 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'POSTGRES_://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:33:53.455 | WARNING  | __main__:<module>:45 - Goodbye!
+2021-01-29 21:33:56.770 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:33:56.771 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:33:56.771 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'POSTGRES_://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:33:56.841 | WARNING  | __main__:<module>:45 - Goodbye!
+2021-01-29 21:34:00.988 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:34:00.989 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:34:00.989 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'POSTGRES_://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:34:01.059 | WARNING  | __main__:<module>:45 - Goodbye!
+2021-01-29 21:34:06.796 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:34:06.796 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:34:06.796 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'POSTGRES_://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:34:06.862 | WARNING  | __main__:<module>:45 - Goodbye!
+2021-01-29 21:34:15.816 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:34:15.816 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:34:15.817 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'POSTGRES_://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:34:15.896 | WARNING  | __main__:<module>:45 - Goodbye!
+2021-01-29 21:34:22.745 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:34:22.746 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:34:22.746 | INFO     | __main__:on_startup:12 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:34:22.825 | INFO     | __main__:on_startup:14 - Configure webhook...
+2021-01-29 21:34:22.900 | INFO     | __main__:on_startup:19 - Configure handlers...
+2021-01-29 21:34:22.905 | INFO     | asyncio.base_events:_run_once:1890 - Start polling.
+2021-01-29 21:34:32.414 | INFO     | bot.controllers.user:create_user:13 - New User: [182552976] Sir Archie
+2021-01-29 21:45:55.584 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:45:55.585 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:45:55.586 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:45:55.644 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:45:57.428 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:45:57.440 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f74602a1430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f746135eac0>
+    │   └ <function run_app at 0x7f7460845ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f74613b5af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f74608381f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f7460f38120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f74613b7dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f7460f38120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:45:59.157 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:45:59.158 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:45:59.159 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:45:59.199 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:45:59.355 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:45:59.364 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fd21076d430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fd2118adac0>
+    │   └ <function run_app at 0x7fd210d13ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fd211885af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fd210d081f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fd2114070b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fd211886dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fd2114070b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:46:00.949 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:46:00.950 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:46:00.951 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:46:00.993 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:46:01.131 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:46:01.139 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f7dcdf5e430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f7dcf09eac0>
+    │   └ <function run_app at 0x7f7dce507ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f7dcf076af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f7dce4f91f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f7dcde670b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f7dcf077dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f7dcde670b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:46:02.908 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:46:02.909 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:46:02.910 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:46:02.951 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:46:03.084 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:46:03.091 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f56275f6430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f5628748ac0>
+    │   └ <function run_app at 0x7f5627bb0ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f5628720af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f5627ba31f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f56275100b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f5628721dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f56275100b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:46:05.302 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:46:05.304 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:46:05.305 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:46:05.347 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:46:05.501 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:46:05.512 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fa379781430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fa37a8c0ac0>
+    │   └ <function run_app at 0x7fa379d29ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fa37a898af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fa379d1b1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fa37a41a0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fa37a899dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fa37a41a0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:46:08.481 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:46:08.482 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:46:08.484 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:46:08.522 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:46:08.656 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:46:08.667 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1a27685430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f1a287c5ac0>
+    │   └ <function run_app at 0x7f1a27c2eca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f1a2879daf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f1a27c201f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f1a2758c120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f1a2879edc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f1a2758c120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:46:13.227 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:46:13.228 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:46:13.230 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:46:13.269 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:46:13.405 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:46:13.413 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f83cc7b7430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f83cd874ac0>
+    │   └ <function run_app at 0x7f83ccd5bca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f83cd8cbaf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f83ccd4e1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f83cd44d0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f83cd8ccdc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f83cd44d0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:46:21.180 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:46:21.181 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:46:21.182 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:46:21.226 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:46:21.357 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:46:21.361 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f766364c430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f766470dac0>
+    │   └ <function run_app at 0x7f7663bf5ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f7664764af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f7663be71f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f7663554120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f7664765dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f7663554120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:46:35.527 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:46:35.528 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:46:35.530 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:46:35.574 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:46:35.714 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:46:35.722 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fe6666f2430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fe66782fac0>
+    │   └ <function run_app at 0x7fe666c97ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fe667807af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fe666c8a1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fe6665f70b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fe667808dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fe6665f70b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:48:19.567 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:19.570 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:19.572 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:19.628 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:19.771 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:19.780 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fc77745b280>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fc778fc4e20>
+    │   └ <function run_app at 0x7fc777a12af0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fc7785ec9d0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fc777a03040>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fc777347820>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fc7785b6ca0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fc777347820>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:48:21.467 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:21.467 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:21.468 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:21.508 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:21.639 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:21.643 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7ff266047430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7ff267104ac0>
+    │   └ <function run_app at 0x7ff2665ebca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7ff26715baf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7ff2665de1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7ff265f4b0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7ff26715cdc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7ff265f4b0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:48:23.232 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:23.233 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:23.235 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:23.281 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:23.418 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:23.431 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f800d761430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f800e81eac0>
+    │   └ <function run_app at 0x7f800dd05ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f800e875af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f800dcf81f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f800d6650b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f800e876dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f800d6650b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:48:25.186 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:25.187 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:25.188 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:25.231 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:25.368 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:25.376 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fa1c424b430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fa1c5308ac0>
+    │   └ <function run_app at 0x7fa1c47efca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fa1c535faf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fa1c47e21f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fa1c414e0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fa1c5360dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fa1c414e0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:48:27.558 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:27.559 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:27.560 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:27.600 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:27.731 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:27.741 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7ff55b719430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7ff55c7daac0>
+    │   └ <function run_app at 0x7ff55bcc2ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7ff55c831af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7ff55bcb41f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7ff55b621120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7ff55c832dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7ff55b621120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:48:30.745 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:30.746 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:30.747 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:30.786 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:30.919 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:30.928 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f4509d58430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f450ae94ac0>
+    │   └ <function run_app at 0x7f450a2fcca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f450ae6caf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f450a2ef1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f4509c5c120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f450ae6ddc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f4509c5c120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:48:35.495 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:35.495 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:35.496 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:35.534 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:35.666 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:35.672 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f5747587430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f57486c3ac0>
+    │   └ <function run_app at 0x7f5747b2bca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f574869baf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f5747b1e1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f574821d0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f574869cdc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f574821d0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:48:43.534 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:43.535 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:43.536 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:43.583 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:43.739 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:43.745 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fe5a14ac430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fe5a25fdac0>
+    │   └ <function run_app at 0x7fe5a1a65ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fe5a25d5af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fe5a1a581f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fe5a21570b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fe5a25d6dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fe5a21570b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:48:58.022 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:48:58.023 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:48:58.024 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:48:58.064 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:48:58.199 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:48:58.208 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f67f94ff430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f67fa63dac0>
+    │   └ <function run_app at 0x7f67f9aa6ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f67fa615af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f67f9a981f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f67f9406120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f67fa616dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f67f9406120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:49:25.316 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:49:25.317 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:49:25.317 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:49:25.349 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:49:25.486 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:49:25.494 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f43c7cfa430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f43c8e4cac0>
+    │   └ <function run_app at 0x7f43c82b4ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f43c8e24af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f43c82a71f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f43c89a60b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f43c8e25dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f43c89a60b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:50:18.082 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:50:18.083 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:50:18.085 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:50:18.132 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:50:18.283 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:50:18.288 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f0a70775430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f0a718b1ac0>
+    │   └ <function run_app at 0x7f0a70d1aca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f0a71889af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f0a70d0c1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f0a7067a0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f0a7188adc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f0a7067a0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:51:19.722 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:51:19.723 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:51:19.724 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:51:19.765 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:51:19.917 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:51:19.926 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7feaaf520430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3031}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7feab065cac0>
+    │   └ <function run_app at 0x7feaafac5ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7feab0634af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7feaafab71f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7feaaf4240b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7feab0635dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7feaaf4240b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3031, 0, 0): cannot assign requested address
+2021-01-29 21:51:50.620 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:51:50.623 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:51:50.624 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:51:50.677 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:51:50.812 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:51:50.818 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fa7f284a280>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fa7f43b3e20>
+    │   └ <function run_app at 0x7fa7f2dffaf0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fa7f39db9d0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fa7f2df3040>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fa7f273a7b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fa7f39a1ca0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fa7f273a7b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:51:52.418 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:51:52.418 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:51:52.419 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:51:52.461 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:51:52.593 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:51:52.603 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fb6f7ff3430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fb6f912fac0>
+    │   └ <function run_app at 0x7fb6f8598ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fb6f9107af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fb6f858a1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fb6f8c89120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fb6f9108dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fb6f8c89120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:51:54.204 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:51:54.205 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:51:54.206 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:51:54.252 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:51:54.391 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:51:54.400 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fa499835430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fa49a972ac0>
+    │   └ <function run_app at 0x7fa499ddaca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fa49a94aaf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fa499dcd1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fa499d374a0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fa49a94bdc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fa499d374a0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:51:56.174 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:51:56.175 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:51:56.176 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:51:56.219 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:51:56.362 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:51:56.369 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f955cbc8430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f955dc89ac0>
+    │   └ <function run_app at 0x7f955d16eca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f955dce0af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f955d1631f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f955cacf120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f955dce1dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f955cacf120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:51:58.629 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:51:58.630 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:51:58.631 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:51:58.672 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:51:58.822 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:51:58.831 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fc06323f430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fc0642fcac0>
+    │   └ <function run_app at 0x7fc0637e3ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fc064353af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fc0637d61f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fc0631430b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fc064354dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fc0631430b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:52:01.849 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:01.850 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:01.852 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:01.896 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:02.036 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:02.045 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fe649ad1430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fe64ab8eac0>
+    │   └ <function run_app at 0x7fe64a076ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fe64abe5af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fe64a0681f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fe6499d5120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fe64abe6dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fe6499d5120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:52:06.698 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:06.698 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:06.699 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:06.738 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:06.889 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:06.897 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f35d45a5430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f35d56e1ac0>
+    │   └ <function run_app at 0x7f35d4b4aca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f35d56b9af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f35d4b3c1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f35d523b0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f35d56badc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f35d523b0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:52:14.712 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:14.713 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:14.714 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:14.756 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:14.896 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:14.904 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fc75b7c5430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': 'localhost', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fc75c917ac0>
+    │   └ <function run_app at 0x7fc75bd7fca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fc75c8efaf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fc75bd721f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fc75b6df120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fc75c8f0dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fc75b6df120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('::1', 3001, 0, 0): cannot assign requested address
+2021-01-29 21:52:28.304 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:28.304 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:28.305 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:28.345 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:28.483 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:28.485 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fcd1ec5f280>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '197.0.0.1', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fcd207c3e20>
+    │   └ <function run_app at 0x7fcd1f211af0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fcd1fdeb9d0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7fcd1f202040>
+          └ <aiohttp.web_runner.TCPSite object at 0x7fcd1eb47820>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7fcd1fdb5ca0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7fcd1eb47820>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address
+2021-01-29 21:52:30.052 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:30.054 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:30.055 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:30.101 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:30.236 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:30.244 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f61fe259430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '197.0.0.1', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f61ff395ac0>
+    │   └ <function run_app at 0x7f61fe7feca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f61ff36daf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f61fe7f01f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f61fe15d0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f61ff36edc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f61fe15d0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address
+2021-01-29 21:52:31.962 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:31.963 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:31.964 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:32.011 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:32.151 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:32.158 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f28f782e430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '197.0.0.1', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f28f88ebac0>
+    │   └ <function run_app at 0x7f28f7dd0ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f28f8942af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f28f7dc51f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f28f77320b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f28f8943dc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f28f77320b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address
+2021-01-29 21:52:34.044 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:34.045 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:34.047 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:34.090 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:34.247 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:34.256 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f9ba64a5430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '197.0.0.1', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f9ba75e3ac0>
+    │   └ <function run_app at 0x7f9ba6a4bca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f9ba75bbaf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f9ba6a3e1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f9ba713d0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f9ba75bcdc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f9ba713d0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address
+2021-01-29 21:52:36.483 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:36.484 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:36.485 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:36.527 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:36.667 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:36.676 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f7e5d3f8430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '197.0.0.1', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f7e5e534ac0>
+    │   └ <function run_app at 0x7f7e5d99cca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f7e5e50caf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f7e5d98f1f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f7e5d2fc120>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f7e5e50ddc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f7e5d2fc120>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address
+2021-01-29 21:52:39.765 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:39.765 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:39.766 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:39.814 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:39.951 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:39.959 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f449a503430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '197.0.0.1', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f449b655ac0>
+    │   └ <function run_app at 0x7f449aabeca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f449b62daf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f449aab01f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f449a41c0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f449b62edc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f449a41c0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address
+2021-01-29 21:52:44.603 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:44.604 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:44.606 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:44.653 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:44.793 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:52:44.801 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=OSError(99, "error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address")>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f54463c9430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '197.0.0.1', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f5447486ac0>
+    │   └ <function run_app at 0x7f544696dca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f54474ddaf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 411, in _run_app
+    await site.start()
+          │    └ <function TCPSite.start at 0x7f54469601f0>
+          └ <aiohttp.web_runner.TCPSite object at 0x7f54462cc0b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 121, in start
+    self._server = await loop.create_server(
+    │    │               │    └ <function BaseEventLoop.create_server at 0x7f54474dedc0>
+    │    │               └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+    │    └ <member '_server' of 'BaseSite' objects>
+    └ <aiohttp.web_runner.TCPSite object at 0x7f54462cc0b0>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1494, in create_server
+    raise OSError(err.errno, 'error while attempting '
+
+OSError: [Errno 99] error while attempting to bind on address ('197.0.0.1', 3001): cannot assign requested address
+2021-01-29 21:52:52.214 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:52:52.215 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:52:52.216 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:52:52.266 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:52:52.417 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:53:38.208 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:53:38.209 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:53:38.211 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:53:38.260 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:53:38.412 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:54:18.241 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-29 21:54:18.242 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-29 21:54:18.244 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-29 21:54:18.301 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-29 21:54:18.441 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-29 21:54:19.010 | INFO     | aiohttp.web_protocol:finish_response:597 - 172.20.0.1 [29/Jan/2021:21:54:18 +0000] "POST /webhook HTTP/1.1" 200 152 "-" "-"
+2021-01-29 21:54:19.367 | INFO     | aiohttp.web_protocol:finish_response:597 - 172.20.0.1 [29/Jan/2021:21:54:19 +0000] "POST /webhook HTTP/1.1" 200 152 "-" "-"

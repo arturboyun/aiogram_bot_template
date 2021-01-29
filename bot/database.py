@@ -1,10 +1,10 @@
 from tortoise import Tortoise
 
-from config import DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_DATABASE
+from config import POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB
 
 TORTOISE_ORM = {
     "connections": {
-        "default": f"postgres://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_DATABASE}"
+        "default": f"postgres://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
     },
     "apps": {
         "models": {

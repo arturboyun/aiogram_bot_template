@@ -6,6 +6,7 @@ env.read_envfile()
 TELEGRAM_BOT_TOKEN = env.str('TELEGRAM_BOT_TOKEN')
 SKIP_UPDATES = env.bool('SKIP_UPDATES')
 LOGFILE = env.str('LOGFILE')
+
 OWNER_ID = env.int('OWNER_ID')
 
 # APP
@@ -23,11 +24,11 @@ WEBHOOK_PATH = env.str('WEBHOOK_PATH')
 WEBHOOK_PORT = env.int('WEBHOOK_PORT')
 
 # DATABASE
-DB_HOST = env.str('DB_HOST', default='localhost')
-DB_PORT = env.int('DB_PORT', default=5432)
-DB_USER = env.str('DB_USER', default='postgres')
-DB_PASSWORD = env.str('DB_PASSWORD', default=None)
-DB_DATABASE = env.str('DB_DATABASE')
+POSTGRES_HOST = env.str('POSTGRES_HOST', default='localhost')
+POSTGRES_PORT = env.int('DB_PORT', default=5432)
+POSTGRES_USER = env.str('POSTGRES_USER', default='postgres')
+POSTGRES_PASSWORD = env.str('POSTGRES_PASSWORD', default=None)
+POSTGRES_DB = env.str('POSTGRES_DB')
 
 # WEBHOOK INIT
 WEBHOOK_URL = f'https://{WEBHOOK_HOST}:{WEBHOOK_PORT}{WEBHOOK_PATH}'

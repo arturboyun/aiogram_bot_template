@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+  redis:
+    image: "redis:alpine"
+    restart: always
+    container_name: redis
+    volumes:
+      - redis_data:/data
+    networks:
+      - app-network
+
+  db:
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
+    env_file:
+      - .env
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    networks:
+      - app-network
+
+  bot:
+    build: .
+    restart: always
+    container_name: bot
+    env_file: .env
+    ports:
+      - $APP_PORT:$APP_PORT
+    volumes:
+      - .:/bot
+    depends_on:
+      - redis
+      - db
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  redis_data:
+  db-data:

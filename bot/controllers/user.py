@@ -9,8 +9,7 @@ async def create_user(user_id: int, full_name: str, username: str = None) -> Opt
         user = await User.create(
             user_id=user_id,
             username=username,
-            full_name=full_name
-        )
+            full_name=full_name)
         logger.info(f"New User: {user}")
     return user
 

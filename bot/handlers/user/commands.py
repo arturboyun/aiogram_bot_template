@@ -11,4 +11,3 @@ async def cmd_start(message: types.Message, state: FSMContext):
         message.from_user.full_name,
         message.from_user.username
     )
-

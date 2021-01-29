@@ -1,16 +1,16 @@
 # Aiogram bot template
 Template for telegram bot
 
-## First setup
-```
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+### Setup
+```shell
+docker-compose up
 ```
 
-## For run
-```
-python main.py
+##### Migrations
+```shell
+docker-compose run --rm bot aerich migrate
+docker-compose run --rm bot aerich upgrade
+docker-compose run --rm bot aerich downgrade
 ```
 
 ## TODO
@@ -19,6 +19,5 @@ python main.py
 - [X] Migrations for TortoiseORM
 - [X] Add example for work with TortoiseORM
 - [ ] Add FastAPI for webhook and other stuff
-- [ ] Remake project structure
-- [ ] Add Docker
-- [ ] CI/CD
+- [X] Add Docker Compose
+- [ ] CI/CD example
