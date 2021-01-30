@@ -1734,3 +1734,2665 @@ OSError: [Errno 99] error while attempting to bind on address ('197.0.0.1', 3001
 2021-01-29 21:54:18.441 | INFO     | __main__:on_startup:21 - Configure handlers...
 2021-01-29 21:54:19.010 | INFO     | aiohttp.web_protocol:finish_response:597 - 172.20.0.1 [29/Jan/2021:21:54:18 +0000] "POST /webhook HTTP/1.1" 200 152 "-" "-"
 2021-01-29 21:54:19.367 | INFO     | aiohttp.web_protocol:finish_response:597 - 172.20.0.1 [29/Jan/2021:21:54:19 +0000] "POST /webhook HTTP/1.1" 200 152 "-" "-"
+2021-01-30 11:25:17.706 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:17.708 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:17.709 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:17.758 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fee2b2af430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fee2c3ebac0>
+    │   └ <function run_app at 0x7fee2b854ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fee2c3c3af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7fee2b8469d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7fee2b2a23b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7fee2b84a280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7fee2b2a23b0>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7fee2b2a23b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7fee2b2a23b0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7fee2c3ebac0>
+          │    └ <property object at 0x7fee2b8b4cc0>
+          └ <Application 0x7fee2c3ebac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7fee2c3ebac0>,)
+          └ <function on_startup at 0x7fee2cd6fdc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7fee2b2af160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7fee2b2f6760>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7fee2b2f68b0>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7fee2b1960d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fee2b29c220>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fee2b29c220>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fee2b29c220>
+    │    │             │       └ <function create_pool at 0x7fee2b18a0d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fee2b29c220>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7fee2b185e50>
+          └ <asyncpg.pool.Pool object at 0x7fee2b2cc340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7fee2b185700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7fee2b218ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7fee2b218ec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7fee2b218ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7fee2b249550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7fee2b22b160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7fee2b22b0d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7fee2c3b5a60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7fee2c3c4ca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7fee2c3c44c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7fee2c3c4310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:25:19.694 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:19.695 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:19.696 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:19.729 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f39d12a2430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f39d2360ac0>
+    │   └ <function run_app at 0x7f39d1847ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f39d23b7af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7f39d183a9d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f39d1296180>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7f39d183d280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7f39d1296180>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7f39d1296180>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f39d1296180>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7f39d2360ac0>
+          │    └ <property object at 0x7f39d18a8d60>
+          └ <Application 0x7f39d2360ac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7f39d2360ac0>,)
+          └ <function on_startup at 0x7f39d2d63dc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7f39d12a2160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7f39d12ea940>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7f39d12ea670>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7f39d118a0d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f39d1290280>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f39d1290280>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f39d1290280>
+    │    │             │       └ <function create_pool at 0x7f39d11800d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f39d1290280>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7f39d1179e50>
+          └ <asyncpg.pool.Pool object at 0x7f39d12c0340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7f39d1179700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7f39d120cec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7f39d120cec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7f39d120cec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7f39d1240550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7f39d121f160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7f39d121f0d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7f39d23a9a60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7f39d23b8ca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7f39d23b84c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7f39d23b8310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:25:21.642 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:21.643 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:21.644 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:21.676 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fa41bef0430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fa41d02cac0>
+    │   └ <function run_app at 0x7fa41c494ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fa41d004af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7fa41c4879d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7fa41bedf590>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7fa41c48a280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7fa41bedf590>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7fa41bedf590>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7fa41bedf590>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7fa41d02cac0>
+          │    └ <property object at 0x7fa41c4f5e00>
+          └ <Application 0x7fa41d02cac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7fa41d02cac0>,)
+          └ <function on_startup at 0x7fa41d9b0dc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7fa41bef0160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7fa41bf37940>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7fa41bf37670>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7fa41bdda0d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fa41bedd280>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fa41bedd280>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fa41bedd280>
+    │    │             │       └ <function create_pool at 0x7fa41bdcc0d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fa41bedd280>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7fa41bdc6e50>
+          └ <asyncpg.pool.Pool object at 0x7fa41bf0d340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7fa41bdc6700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7fa41be59ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7fa41be59ec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7fa41be59ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7fa41be8d550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7fa41be6c160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7fa41be6c0d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7fa41cff6a60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7fa41d005ca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7fa41d0054c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7fa41d005310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:25:24.282 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:24.283 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:24.283 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:24.314 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1eccc70430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f1ecddc2ac0>
+    │   └ <function run_app at 0x7f1ecd22aca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f1ecdd9aaf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7f1ecd21d9d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f1eccc79270>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7f1ecd220280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7f1eccc79270>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7f1eccc79270>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f1eccc79270>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7f1ecddc2ac0>
+          │    └ <property object at 0x7f1ecd28be00>
+          └ <Application 0x7f1ecddc2ac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7f1ecddc2ac0>,)
+          └ <function on_startup at 0x7f1ece746dc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7f1eccc70160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7f1eccccd9a0>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7f1eccccd6d0>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7f1eccb6d0d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f1eccc734f0>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f1eccc734f0>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f1eccc734f0>
+    │    │             │       └ <function create_pool at 0x7f1eccb620d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f1eccc734f0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7f1eccb5ce50>
+          └ <asyncpg.pool.Pool object at 0x7f1eccca3340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7f1eccb5c700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7f1eccbc9ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7f1eccbc9ec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7f1eccbc9ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7f1eccc22550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7f1eccc01160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7f1eccc010d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7f1ecdd8ca60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7f1ecdd9bca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7f1ecdd9b4c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7f1ecdd9b310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:25:27.003 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:27.003 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:27.004 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:27.038 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fd9f17bc430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fd9f2879ac0>
+    │   └ <function run_app at 0x7fd9f1d60ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fd9f28d0af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7fd9f1d539d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7fd9f17af180>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7fd9f1d56280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7fd9f17af180>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7fd9f17af180>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7fd9f17af180>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7fd9f2879ac0>
+          │    └ <property object at 0x7fd9f1dc1db0>
+          └ <Application 0x7fd9f2879ac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7fd9f2879ac0>,)
+          └ <function on_startup at 0x7fd9f327cdc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7fd9f17bc160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7fd9f1803940>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7fd9f1803670>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7fd9f16a30d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fd9f17a9280>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fd9f17a9280>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fd9f17a9280>
+    │    │             │       └ <function create_pool at 0x7fd9f169a0d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fd9f17a9280>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7fd9f1692e50>
+          └ <asyncpg.pool.Pool object at 0x7fd9f17d9340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7fd9f1692700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7fd9f16feec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7fd9f16feec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7fd9f16feec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7fd9f1759550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7fd9f1738160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7fd9f17380d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7fd9f28c2a60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7fd9f28d1ca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7fd9f28d14c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7fd9f28d1310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:25:30.266 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:30.267 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:30.267 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:30.299 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7fb362e7b430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7fb363f3cac0>
+    │   └ <function run_app at 0x7fb363423ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7fb363f93af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7fb3634169d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7fb362e734a0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7fb363419280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7fb362e734a0>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7fb362e734a0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7fb362e734a0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7fb363f3cac0>
+          │    └ <property object at 0x7fb363484db0>
+          └ <Application 0x7fb363f3cac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7fb363f3cac0>,)
+          └ <function on_startup at 0x7fb36493fdc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7fb362e7b160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7fb362ec69a0>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7fb362ec66d0>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7fb362d690d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fb362e6c4f0>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fb362e6c4f0>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fb362e6c4f0>
+    │    │             │       └ <function create_pool at 0x7fb362d5a0d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7fb362e6c4f0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7fb362d57e50>
+          └ <asyncpg.pool.Pool object at 0x7fb362e9c340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7fb362d57700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7fb362dc1ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7fb362dc1ec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7fb362dc1ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7fb362e1b550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7fb362dfa160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7fb362dfa0d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7fb363f86a60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7fb363f94ca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7fb363f944c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7fb363f94310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:25:35.194 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:35.195 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:35.195 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:35.230 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f11709fc430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f1171acfac0>
+    │   └ <function run_app at 0x7f1170fb7ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f1171b26af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7f1170fa99d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f1170a05360>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7f1170fac280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7f1170a05360>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7f1170a05360>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f1170a05360>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7f1171acfac0>
+          │    └ <property object at 0x7f1171017c70>
+          └ <Application 0x7f1171acfac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7f1171acfac0>,)
+          └ <function on_startup at 0x7f11724d2dc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7f11709fc160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7f1170a599d0>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7f1170a59700>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7f11708f60d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f11709ff580>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f11709ff580>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f11709ff580>
+    │    │             │       └ <function create_pool at 0x7f11708ee0d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f11709ff580>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7f11708e8e50>
+          └ <asyncpg.pool.Pool object at 0x7f1170a2f340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7f11708e8700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7f117097bec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7f117097bec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7f117097bec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7f11709ae550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7f117098d160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7f117098d0d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7f1171b19a60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7f1171b27ca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7f1171b274c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7f1171b27310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:25:42.271 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:42.271 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:42.273 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:42.301 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f4d82481430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f4d83540ac0>
+    │   └ <function run_app at 0x7f4d82a27ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f4d83597af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7f4d82a1a9d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f4d82471590>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7f4d82a1d280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7f4d82471590>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7f4d82471590>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f4d82471590>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7f4d83540ac0>
+          │    └ <property object at 0x7f4d82a88db0>
+          └ <Application 0x7f4d83540ac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7f4d83540ac0>,)
+          └ <function on_startup at 0x7f4d83f43dc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7f4d82481160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7f4d824ca940>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7f4d824ca670>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7f4d8236d0d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f4d824702b0>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f4d824702b0>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f4d824702b0>
+    │    │             │       └ <function create_pool at 0x7f4d8235e0d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f4d824702b0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7f4d8235be50>
+          └ <asyncpg.pool.Pool object at 0x7f4d824a0340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7f4d8235b700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7f4d823ecec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7f4d823ecec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7f4d823ecec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7f4d8241c550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7f4d82403160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7f4d824030d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7f4d8358aa60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7f4d83598ca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7f4d835984c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7f4d83598310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:25:56.405 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:25:56.406 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:25:56.407 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:25:56.434 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f139ce81430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f139dfbdac0>
+    │   └ <function run_app at 0x7f139d425ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f139df95af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7f139d4189d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f139ce70400>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7f139d41b280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7f139ce70400>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7f139ce70400>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f139ce70400>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7f139dfbdac0>
+          │    └ <property object at 0x7f139d486db0>
+          └ <Application 0x7f139dfbdac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7f139dfbdac0>,)
+          └ <function on_startup at 0x7f139e941dc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7f139ce81160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7f139cec8940>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7f139cec8670>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7f139cd6b0d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f139ce6e280>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f139ce6e280>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f139ce6e280>
+    │    │             │       └ <function create_pool at 0x7f139cd5d0d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f139ce6e280>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7f139cd57e50>
+          └ <asyncpg.pool.Pool object at 0x7f139ce9e340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7f139cd57700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7f139cdc3ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7f139cdc3ec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7f139cdc3ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7f139ce1d550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7f139cdfd160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7f139cdfd0d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7f139df87a60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7f139df96ca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7f139df964c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7f139df96310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:26:23.465 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:26:23.466 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:26:23.466 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:26:23.493 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f6d19731430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f6d1a871ac0>
+    │   └ <function run_app at 0x7f6d19cd9ca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f6d1a849af0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7f6d19ccc9d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f6d19728130>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7f6d19ccf280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7f6d19728130>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7f6d19728130>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f6d19728130>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7f6d1a871ac0>
+          │    └ <property object at 0x7f6d19d3ad10>
+          └ <Application 0x7f6d1a871ac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7f6d1a871ac0>,)
+          └ <function on_startup at 0x7f6d1b1f5dc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7f6d19731160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7f6d1977c9a0>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7f6d1977c6d0>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7f6d1961f0d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f6d197214f0>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f6d197214f0>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f6d197214f0>
+    │    │             │       └ <function create_pool at 0x7f6d196110d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f6d197214f0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7f6d1960be50>
+          └ <asyncpg.pool.Pool object at 0x7f6d19752340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7f6d1960b700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7f6d19677ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7f6d19677ec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7f6d19677ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7f6d196d1550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7f6d196b0160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7f6d196b00d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7f6d1a83ca60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7f6d1a84aca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7f6d1a84a4c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7f6d1a84a310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:27:16.364 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:27:16.365 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:27:16.366 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:27:16.398 | ERROR    | aiohttp.web:_cancel_tasks:451 - unhandled exception during asyncio.run() shutdown
+task: <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f74358e6430>
+
+  File "/bot/main.py", line 36, in main
+    web.run_app(web_app, **config.WEBHOOK_SERVER)
+    │   │       │          │      └ {'host': '0.0.0.0', 'port': 3001}
+    │   │       │          └ <module 'config' from '/bot/config.py'>
+    │   │       └ <Application 0x7f74369a3ac0>
+    │   └ <function run_app at 0x7f7435e8aca0>
+    └ <module 'aiohttp.web' from '/usr/local/lib/python3.9/site-packages/aiohttp/web.py'>
+
+> File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 508, in run_app
+    loop.run_until_complete(main_task)
+    │    │                  └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+    │    └ <function BaseEventLoop.run_until_complete at 0x7f74369faaf0>
+    └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+           │      └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-1' coro=<_run_app() done, defined at /usr/local/lib/python3.9/site-packages/aiohttp/web.py:287> exc...
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web.py", line 319, in _run_app
+    await runner.setup()
+          │      └ <function BaseRunner.setup at 0x7f7435e7d9d0>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f74358d9270>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 275, in setup
+    self._server = await self._make_server()
+    │    │               │    └ <function AppRunner._make_server at 0x7f7435e80280>
+    │    │               └ <aiohttp.web_runner.AppRunner object at 0x7f74358d9270>
+    │    └ <member '_server' of 'BaseRunner' objects>
+    └ <aiohttp.web_runner.AppRunner object at 0x7f74358d9270>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_runner.py", line 375, in _make_server
+    await self._app.startup()
+          │    └ <member '_app' of 'AppRunner' objects>
+          └ <aiohttp.web_runner.AppRunner object at 0x7f74358d9270>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/web_app.py", line 416, in startup
+    await self.on_startup.send(self)
+          │    │               └ <Application 0x7f74369a3ac0>
+          │    └ <property object at 0x7f7435eebd10>
+          └ <Application 0x7f74369a3ac0>
+  File "/usr/local/lib/python3.9/site-packages/aiohttp/signals.py", line 34, in send
+    await receiver(*args, **kwargs)  # type: ignore
+          │         │       └ {}
+          │         └ (<Application 0x7f74369a3ac0>,)
+          └ <function on_startup at 0x7f74373a6dc0>
+
+  File "/bot/main.py", line 14, in on_startup
+    await database.setup()
+          │        └ <function setup at 0x7f74358e6160>
+          └ <module 'bot.database' from '/bot/bot/database.py'>
+
+  File "/bot/bot/database.py", line 19, in setup
+    await Tortoise.init(TORTOISE_ORM)
+          │        │    └ {'connections': {'default': 'postgres://postgres:admin@db:5432/reports-bot'}, 'apps': {'models': {'models': ['bot.models', 'a...
+          │        └ <classmethod object at 0x7f743592d940>
+          └ <class 'tortoise.Tortoise'>
+
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 555, in init
+    await cls._init_connections(connections_config, _create_db)
+          │   │                 │                   └ False
+          │   │                 └ {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+          │   └ <classmethod object at 0x7f743592d670>
+          └ <class 'tortoise.Tortoise'>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/__init__.py", line 385, in _init_connections
+    await connection.create_connection(with_db=True)
+          │          └ <function AsyncpgDBClient.create_connection at 0x7f74357cd0d0>
+          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f74358d3280>
+  File "/usr/local/lib/python3.9/site-packages/tortoise/backends/asyncpg/client.py", line 94, in create_connection
+    self._pool = await asyncpg.create_pool(None, password=self.password, **self._template)
+    │    │             │       │                          │    │           │    └ {'host': 'db', 'port': 5432, 'user': 'postgres', 'database': 'reports-bot', 'min_size': 1, 'max_size': 5, 'connection_class':...
+    │    │             │       │                          │    │           └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f74358d3280>
+    │    │             │       │                          │    └ 'admin'
+    │    │             │       │                          └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f74358d3280>
+    │    │             │       └ <function create_pool at 0x7f74357c10d0>
+    │    │             └ <module 'asyncpg' from '/usr/local/lib/python3.9/site-packages/asyncpg/__init__.py'>
+    │    └ None
+    └ <tortoise.backends.asyncpg.client.AsyncpgDBClient object at 0x7f74358d3280>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 398, in _async__init__
+    await self._initialize()
+          │    └ <function Pool._initialize at 0x7f74357bce50>
+          └ <asyncpg.pool.Pool object at 0x7f7435903340>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 426, in _initialize
+    await first_ch.connect()
+          │        └ <function PoolConnectionHolder.connect at 0x7f74357bc700>
+          └ <asyncpg.pool.PoolConnectionHolder object at 0x7f7435829ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 125, in connect
+    self._con = await self._pool._get_new_connection()
+    │    │            │    └ <member '_pool' of 'PoolConnectionHolder' objects>
+    │    │            └ <asyncpg.pool.PoolConnectionHolder object at 0x7f7435829ec0>
+    │    └ <member '_con' of 'PoolConnectionHolder' objects>
+    └ <asyncpg.pool.PoolConnectionHolder object at 0x7f7435829ec0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/pool.py", line 468, in _get_new_connection
+    con = await connection.connect(
+                │          └ <function connect at 0x7f7435882550>
+                └ <module 'asyncpg.connection' from '/usr/local/lib/python3.9/site-packages/asyncpg/connection.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connection.py", line 1718, in connect
+    return await connect_utils._connect(
+                 │             └ <function _connect at 0x7f7435862160>
+                 └ <module 'asyncpg.connect_utils' from '/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py'>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 674, in _connect
+    raise last_error
+          └ gaierror(-3, 'Temporary failure in name resolution')
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 663, in _connect
+    con = await _connect_addr(
+                └ <function _connect_addr at 0x7f74358620d0>
+  File "/usr/local/lib/python3.9/site-packages/asyncpg/connect_utils.py", line 632, in _connect_addr
+    tr, pr = await asyncio.wait_for(
+                   │       └ <function wait_for at 0x7f74369eda60>
+                   └ <module 'asyncio' from '/usr/local/lib/python3.9/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.9/asyncio/tasks.py", line 478, in wait_for
+    return fut.result()
+           │   └ <method 'result' of '_asyncio.Task' objects>
+           └ <Task finished name='Task-4' coro=<BaseEventLoop.create_connection() done, defined at /usr/local/lib/python3.9/asyncio/base_e...
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1017, in create_connection
+    infos = await self._ensure_resolved(
+                  │    └ <function BaseEventLoop._ensure_resolved at 0x7f74369fbca0>
+                  └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1396, in _ensure_resolved
+    return await loop.getaddrinfo(host, port, family=family, type=type,
+                 │    │           │     │            │            └ <SocketKind.SOCK_STREAM: 1>
+                 │    │           │     │            └ 0
+                 │    │           │     └ 5432
+                 │    │           └ 'db'
+                 │    └ <function BaseEventLoop.getaddrinfo at 0x7f74369fb4c0>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 856, in getaddrinfo
+    return await self.run_in_executor(
+                 │    └ <function BaseEventLoop.run_in_executor at 0x7f74369fb310>
+                 └ <_UnixSelectorEventLoop running=False closed=False debug=False>
+  File "/usr/local/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+  File "/usr/local/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               │       │           │     │     │       │     │      └ 0
+               │       │           │     │     │       │     └ 0
+               │       │           │     │     │       └ <SocketKind.SOCK_STREAM: 1>
+               │       │           │     │     └ 0
+               │       │           │     └ 5432
+               │       │           └ 'db'
+               │       └ <built-in function getaddrinfo>
+               └ <module '_socket' from '/usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so'>
+
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-01-30 11:27:56.507 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:27:56.508 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:27:56.509 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:27:56.596 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-30 11:27:56.765 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-30 11:28:49.787 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:28:49.788 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:28:49.789 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:28:49.833 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-30 11:28:49.986 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-30 11:29:21.956 | INFO     | bot.misc:setup:24 - Bot: ar_present_bot [@ARPresentBot]
+2021-01-30 11:29:21.957 | DEBUG    | bot.misc:setup:25 - ROOT_DIR=PosixPath('/bot')
+2021-01-30 11:29:21.957 | INFO     | __main__:on_startup:14 - Tortoise-ORM startup
+    connections: {'default': 'postgres://postgres:admin@db:5432/reports-bot'}
+    apps: {'models': {'models': ['bot.models', 'aerich.models'], 'default_connection': 'default'}}
+2021-01-30 11:29:22.005 | INFO     | __main__:on_startup:16 - Configure webhook...
+2021-01-30 11:29:22.073 | INFO     | __main__:on_startup:21 - Configure handlers...
+2021-01-30 11:29:22.080 | INFO     | asyncio.base_events:_run_once:1890 - Start polling.
+2021-01-30 11:38:08.390 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9af0>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9af0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9af0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9af0>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712647
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712647, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712647, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:38:18.599 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9e50>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9e50>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9e50>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9e50>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712647
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712647, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712647, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:38:28.809 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5dda30>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5dda30>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5dda30>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5dda30>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:38:38.995 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5ddcd0>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5ddcd0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5ddcd0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5ddcd0>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:38:49.183 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5dde80>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5dde80>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5dde80>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5dde80>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:38:59.364 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9760>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9760>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9760>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9760>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:39:09.545 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e98b0>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e98b0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e98b0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e98b0>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:39:19.724 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9550>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9550>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9550>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9550>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:39:29.899 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9310>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9310>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9310>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9310>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:39:40.078 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9940>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9940>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9940>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9940>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2021-01-30 11:39:50.271 | ERROR    | asyncio.events:_run:80 - Cause exception while getting updates.
+Traceback (most recent call last):
+
+  File "/bot/main.py", line 44, in <module>
+    main()
+    └ <function main at 0x7f1b9b8e8280>
+
+  File "/bot/main.py", line 40, in main
+    executor.start_polling()
+    │        └ <function Executor.start_polling at 0x7f1b9bbec9d0>
+    └ <aiogram.utils.executor.Executor object at 0x7f1b9bb357c0>
+
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/executor.py", line 312, in start_polling
+    loop.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f1b9ca79940>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f1b9ca434c0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.9/asyncio/base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f1b9cb118b0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9ac0>(<Future finished result=None>)>
+  File "/usr/local/lib/python3.9/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9ac0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9ac0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x7f1b9c5e9ac0>(<Future finished result=None>)>
+> File "/usr/local/lib/python3.9/site-packages/aiogram/dispatcher/dispatcher.py", line 359, in start_polling
+    updates = await self.bot.get_updates(limit=limit, offset=offset, timeout=timeout)
+                    │    │   │                 │             │               └ 20
+                    │    │   │                 │             └ 687712648
+                    │    │   │                 └ None
+                    │    │   └ <function Bot.get_updates at 0x7f1b9bd57af0>
+                    │    └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                    └ <aiogram.dispatcher.dispatcher.Dispatcher object at 0x7f1b9bb35790>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/bot.py", line 95, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+                   │    │       │   │       │            └ {'offset': 687712648, 'timeout': 20}
+                   │    │       │   │       └ <aiogram.utils.helper.Item object at 0x7f1b9ca0d340>
+                   │    │       │   └ <class 'aiogram.bot.api.Methods'>
+                   │    │       └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+                   │    └ <function BaseBot.request at 0x7f1b9bdcb310>
+                   └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/base.py", line 200, in request
+    return await api.make_request(self.session, self.__token, method, data, files,
+                 │   │            │    │        │             │       │     └ None
+                 │   │            │    │        │             │       └ {'offset': 687712648, 'timeout': 20}
+                 │   │            │    │        │             └ 'getUpdates'
+                 │   │            │    │        └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   │            │    └ <property object at 0x7f1b9bdbdae0>
+                 │   │            └ <aiogram.bot.bot.Bot object at 0x7f1b9bbff580>
+                 │   └ <function make_request at 0x7f1b9bdf24c0>
+                 └ <module 'aiogram.bot.api' from '/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 104, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+           │            │       │        │             │        │             │        └ <function ClientResponse.text at 0x7f1b9c1c1a60>
+           │            │       │        │             │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │             │        │               <CIMul...
+           │            │       │        │             │        └ 409
+           │            │       │        │             └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │       │        │               <CIMul...
+           │            │       │        └ <property object at 0x7f1b9c3c0720>
+           │            │       └ <ClientResponse(https://api.telegram.org/bot1211547125:AAEMRcFqseSuGZ1lfqV9LbH18k6kNao5Wp4/getUpdates) [409 Conflict]>
+           │            │         <CIMul...
+           │            └ 'getUpdates'
+           └ <function check_result at 0x7f1b9bdd6ee0>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/bot/api.py", line 82, in check_result
+    exceptions.ConflictError.detect(description)
+    │          │             │      └ 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+    │          │             └ <classmethod object at 0x7f1b9bdf0160>
+    │          └ <class 'aiogram.utils.exceptions.ConflictError'>
+    └ <module 'aiogram.utils.exceptions' from '/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py'>
+  File "/usr/local/lib/python3.9/site-packages/aiogram/utils/exceptions.py", line 137, in detect
+    raise err(cls.text or description)
+          │   │   │       └ 'conflict: terminated by other getupdates request; make sure that only one bot instance is running'
+          │   │   └ None
+          │   └ <class 'aiogram.utils.exceptions.ConflictError'>
+          └ <class 'aiogram.utils.exceptions.TerminatedByOtherGetUpdates'>
+
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
