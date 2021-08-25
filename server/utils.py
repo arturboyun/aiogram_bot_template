@@ -18,10 +18,7 @@ async def send_message_to_payments_chat(amount: Decimal, worker: Union[User, Non
     worker_percent = config.WORKER_PERCENT
     worker_money = float(amount) * float(worker_percent) / 100
     text = [
-        f'🎄 <b>Новый залет</b> ✌️',
-        f'💰 Сумма: {round(amount, 2)} руб.💰',
-        f'❄️ Доля воркера: {worker_money} руб. {worker_percent}%',
-        f'👨‍💻 Воркер: {worker_mention}',
+        f'🎄 <b>Текст</b> ✌️'
     ]
     try:
         await bot.send_message(config.PAYMENTS_CHAT_ID, '\n'.join(text))
