@@ -1,5 +1,5 @@
 # Aiogram bot template
-Template for telegram bot
+This is a template for easy start of bot async development for Telegram
 
 ### Setup
 ```shell
