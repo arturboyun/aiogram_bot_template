@@ -13,7 +13,7 @@ click==7.1.2
 colorama==0.4.4
 envparse==0.2.0
 hiredis==1.1.0
-idna==2.10
+idna==3.7
 iso8601==0.1.13
 loguru==0.5.3
 multidict==5.0.0
