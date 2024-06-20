@@ -21,3 +21,5 @@ docker-compose run --rm bot aerich downgrade
 - [ ] Add FastAPI for webhook and other stuff
 - [X] Add Docker Compose
 - [ ] CI/CD example
+- [ ] Migration to aiogram 3
+- [ ] Migration to sqlalchemy v2 
